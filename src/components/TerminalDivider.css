@@ -1,0 +1,22 @@
+.terminal-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  padding: var(--space-6) 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--outline-variant);
+  letter-spacing: 0.08em;
+  user-select: none;
+}
+
+.terminal-divider__dots {
+  opacity: 0.5;
+  letter-spacing: 0.2em;
+}
+
+.terminal-divider__label {
+  color: var(--outline);
+  white-space: nowrap;
+}

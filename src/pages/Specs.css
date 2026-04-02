@@ -1,0 +1,392 @@
+/* ── SPECS PAGE ──────────────────────────────────────────── */
+.specs__header {
+  background: var(--surface-container-lowest);
+}
+
+.specs__nav-tabs {
+  display: flex;
+  gap: 2px;
+  margin-bottom: var(--space-8);
+  background: rgba(76,67,85,0.15);
+  padding: 2px;
+  width: fit-content;
+  border: 1px solid rgba(76,67,85,0.2);
+}
+
+.specs__tab {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+  color: var(--outline);
+  padding: var(--space-2) var(--space-5);
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  border: none;
+}
+
+.specs__tab:hover {
+  color: var(--on-surface);
+  background: rgba(76,67,85,0.3);
+}
+
+.specs__tab--active {
+  color: var(--primary);
+  background: rgba(153,69,255,0.1);
+}
+
+.specs__title {
+  font-family: var(--font-display);
+  font-size: clamp(var(--text-4xl), 10vw, 7rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  color: var(--on-surface);
+  margin-bottom: var(--space-6);
+}
+
+.specs__title-accent {
+  color: var(--primary);
+}
+
+.specs__version {
+  font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
+  color: var(--outline);
+}
+
+.specs__subtitle {
+  font-size: var(--text-lg);
+  color: var(--on-surface-variant);
+  max-width: 520px;
+  line-height: 1.7;
+}
+
+.specs__section-title {
+  font-family: var(--font-display);
+  font-size: clamp(var(--text-3xl), 5vw, var(--text-4xl));
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--on-surface);
+  margin-bottom: var(--space-10);
+}
+
+/* Subsections */
+.specs__subsections {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+  padding: var(--space-8);
+  background: var(--surface-container-low);
+  border: 1px solid rgba(76,67,85,0.2);
+}
+
+.specs__subsection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.specs__sub-heading {
+  color: var(--outline);
+  font-size: var(--text-xs);
+}
+
+.specs__lang-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(76,67,85,0.15);
+}
+
+.specs__lang-card {
+  background: var(--surface-container);
+  padding: var(--space-4) var(--space-5);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  transition: background var(--transition-base);
+}
+
+.specs__lang-card:hover {
+  background: var(--surface-container-high);
+}
+
+.specs__lang-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary-container);
+  flex-shrink: 0;
+}
+
+.specs__lang-name {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--on-surface);
+}
+
+.specs__standards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.specs__standards-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.specs__standards-label {
+  color: var(--outline);
+  font-size: var(--text-xs);
+}
+
+.specs__tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* DeFi grid */
+.specs__defi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(76,67,85,0.15);
+  border: 1px solid rgba(76,67,85,0.15);
+}
+
+.specs__defi-card {
+  background: var(--surface-container-low);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  transition: background var(--transition-base);
+  border-bottom: 2px solid transparent;
+}
+
+.specs__defi-card:hover {
+  background: var(--surface-container-high);
+  border-bottom-color: var(--secondary-container);
+}
+
+.specs__defi-label {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--on-surface);
+  letter-spacing: -0.01em;
+}
+
+.specs__defi-card:hover .specs__defi-label {
+  color: var(--secondary-container);
+}
+
+.specs__defi-desc {
+  font-size: var(--text-sm);
+  color: var(--on-surface-variant);
+  line-height: 1.6;
+}
+
+/* Security */
+.specs__security-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: start;
+}
+
+.specs__slither {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+  padding: var(--space-8);
+  background: var(--surface-container-low);
+  border: 1px solid rgba(76,67,85,0.2);
+}
+
+.specs__slither-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.specs__slither-label {
+  color: var(--outline);
+  font-size: var(--text-xs);
+}
+
+.specs__slither-score {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  color: var(--secondary-container);
+  letter-spacing: -0.03em;
+}
+
+.specs__progress-bar {
+  height: 4px;
+  background: rgba(76,67,85,0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.specs__progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--secondary-container), var(--primary-container));
+  box-shadow: 0 0 12px rgba(20,241,149,0.4);
+}
+
+.specs__progress-label {
+  color: var(--on-surface-variant);
+  font-size: var(--text-xs);
+}
+
+.specs__security-checks {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: rgba(76,67,85,0.15);
+  border: 1px solid rgba(76,67,85,0.15);
+}
+
+.specs__check-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-5) var(--space-6);
+  background: var(--surface-container-low);
+  transition: background var(--transition-base);
+}
+
+.specs__check-item:hover {
+  background: var(--surface-container-high);
+}
+
+.specs__check-icon {
+  color: var(--secondary-container);
+  font-size: var(--text-base);
+  flex-shrink: 0;
+}
+
+.specs__check-label {
+  font-size: var(--text-sm);
+  color: var(--on-surface-variant);
+}
+
+/* Tools */
+.specs__tools-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(76,67,85,0.15);
+  border: 1px solid rgba(76,67,85,0.15);
+}
+
+.specs__tool-group {
+  background: var(--surface-container-low);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  transition: background var(--transition-base);
+}
+
+.specs__tool-group:hover {
+  background: var(--surface-container-high);
+}
+
+.specs__tool-label {
+  color: var(--outline);
+  font-size: var(--text-xs);
+}
+
+/* IEEE section */
+.specs__ieee {
+  padding: var(--space-12);
+  background: var(--surface-container-low);
+  border: 1px solid rgba(153,69,255,0.2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  position: relative;
+  overflow: hidden;
+}
+
+.specs__ieee::before {
+  content: 'IEEE';
+  position: absolute;
+  top: var(--space-6);
+  right: var(--space-8);
+  font-family: var(--font-display);
+  font-size: 6rem;
+  font-weight: 800;
+  color: rgba(153,69,255,0.05);
+  letter-spacing: -0.05em;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.specs__ieee-tag {
+  color: var(--outline);
+}
+
+.specs__ieee-title {
+  font-family: var(--font-display);
+  font-size: clamp(var(--text-xl), 3vw, var(--text-3xl));
+  font-weight: 700;
+  color: var(--on-surface);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.specs__ieee-meta {
+  display: flex;
+  gap: var(--space-10);
+  flex-wrap: wrap;
+}
+
+.specs__ieee-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.specs__ieee-meta-label {
+  color: var(--outline);
+  font-size: var(--text-xs);
+}
+
+.specs__ieee-meta-value {
+  font-size: var(--text-base);
+  color: var(--on-surface);
+}
+
+.specs__doi-mono {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--primary);
+}
+
+.specs__ieee-buttons {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .specs__defi-grid { grid-template-columns: repeat(2, 1fr); }
+  .specs__tools-grid { grid-template-columns: 1fr; }
+  .specs__security-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .specs__lang-grid { grid-template-columns: repeat(2, 1fr); }
+  .specs__defi-grid { grid-template-columns: 1fr; }
+  .specs__ieee { padding: var(--space-6) var(--space-5); }
+  .specs__ieee::before { display: none; }
+}

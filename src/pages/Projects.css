@@ -1,0 +1,295 @@
+/* ── THE FORGE (PROJECTS) ────────────────────────────────── */
+.forge__header {
+  background: var(--surface-container-lowest);
+}
+
+.forge__sys {
+  display: block;
+  margin-bottom: var(--space-6);
+}
+
+.forge__title {
+  font-family: var(--font-display);
+  font-size: clamp(var(--text-5xl), 11vw, 8rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  color: var(--on-surface);
+  margin-bottom: var(--space-6);
+}
+
+.forge__title-accent {
+  color: var(--secondary-container);
+}
+
+.forge__subtitle {
+  font-size: var(--text-lg);
+  color: var(--on-surface-variant);
+  max-width: 520px;
+  line-height: 1.7;
+}
+
+.forge__section-title {
+  font-family: var(--font-display);
+  font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--on-surface);
+  margin-bottom: var(--space-10);
+}
+
+/* Project cards */
+.forge__project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: rgba(76,67,85,0.2);
+  border: 1px solid rgba(76,67,85,0.2);
+}
+
+.forge__project-card {
+  background: var(--surface-container-low);
+  padding: var(--space-10);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.forge__project-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity var(--transition-slow);
+}
+
+.forge__project-card--primary::before {
+  background: linear-gradient(135deg, rgba(153,69,255,0.05), transparent);
+}
+
+.forge__project-card--secondary::before {
+  background: linear-gradient(135deg, rgba(20,241,149,0.05), transparent);
+}
+
+.forge__project-card:hover {
+  background: var(--surface-container-high);
+}
+
+.forge__project-card--primary:hover {
+  box-shadow: inset 0 0 40px rgba(153,69,255,0.06);
+}
+
+.forge__project-card--secondary:hover {
+  box-shadow: inset 0 0 40px rgba(20,241,149,0.06);
+}
+
+.forge__project-card:hover::before {
+  opacity: 1;
+}
+
+.forge__project-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.forge__project-id {
+  font-size: var(--text-xs);
+  color: var(--outline);
+}
+
+.forge__project-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: blink 2s ease infinite;
+}
+
+.forge__project-dot--primary { background: var(--primary-container); }
+.forge__project-dot--secondary { background: var(--secondary-container); }
+
+.forge__project-name {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--on-surface);
+  letter-spacing: -0.02em;
+}
+
+.forge__project-card--primary:hover .forge__project-name { color: var(--primary); }
+.forge__project-card--secondary:hover .forge__project-name { color: var(--secondary-container); }
+
+.forge__project-desc {
+  font-size: var(--text-base);
+  color: var(--on-surface-variant);
+  line-height: 1.7;
+  flex: 1;
+}
+
+.forge__project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.forge__project-footer {
+  margin-top: var(--space-2);
+}
+
+.forge__repo-btn {
+  font-size: var(--text-xs) !important;
+  padding: var(--space-2) var(--space-4) !important;
+}
+
+/* Research */
+.forge__research-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: rgba(76,67,85,0.15);
+  border: 1px solid rgba(76,67,85,0.15);
+}
+
+.forge__research-card {
+  background: var(--surface-container-low);
+  padding: var(--space-10);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  transition: background var(--transition-base);
+}
+
+.forge__research-card:hover {
+  background: var(--surface-container-high);
+}
+
+.forge__research-title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--on-surface);
+  letter-spacing: -0.02em;
+  max-width: 700px;
+}
+
+.forge__research-excerpt {
+  font-size: var(--text-base);
+  color: var(--on-surface-variant);
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+.forge__doi {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-5);
+  background: rgba(153,69,255,0.06);
+  border: 1px solid rgba(153,69,255,0.2);
+  width: fit-content;
+}
+
+.forge__doi-label {
+  color: var(--primary);
+  font-size: var(--text-xs);
+}
+
+.forge__doi-value {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--on-surface-variant);
+}
+
+.forge__research-sub {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: rgba(76,67,85,0.15);
+  margin-top: var(--space-2);
+}
+
+.forge__sub-item {
+  background: var(--surface-container);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.forge__sub-title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--on-surface);
+}
+
+.forge__sub-desc {
+  font-size: var(--text-sm);
+  color: var(--on-surface-variant);
+  line-height: 1.6;
+}
+
+.forge__read-btn {
+  font-size: var(--text-xs) !important;
+  padding: var(--space-2) var(--space-4) !important;
+  align-self: flex-start;
+}
+
+/* Lab Binaries */
+.forge__lab-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(76,67,85,0.15);
+  border: 1px solid rgba(76,67,85,0.15);
+}
+
+.forge__lab-card {
+  background: var(--surface-container-low);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  transition: background var(--transition-base);
+}
+
+.forge__lab-card:hover {
+  background: var(--surface-container-high);
+}
+
+.forge__lab-name {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--on-surface);
+  letter-spacing: -0.01em;
+}
+
+.forge__lab-desc {
+  font-size: var(--text-sm);
+  color: var(--on-surface-variant);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.forge__lab-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .forge__project-grid { grid-template-columns: 1fr; }
+  .forge__lab-grid { grid-template-columns: 1fr; }
+  .forge__research-sub { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .forge__project-card { padding: var(--space-6) var(--space-5); }
+  .forge__research-card { padding: var(--space-6) var(--space-5); }
+  .forge__lab-card { padding: var(--space-6) var(--space-5); }
+}
