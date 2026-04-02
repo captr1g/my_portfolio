@@ -130,10 +130,6 @@ export default function Projects() {
               </p>
               <div className="flex items-center gap-10">
                 <div>
-                  <span className="block text-[10px] font-label text-outline uppercase mb-1">Citations</span>
-                  <span className="text-xl font-headline font-bold text-white">42+</span>
-                </div>
-                <div>
                   <span className="block text-[10px] font-label text-outline uppercase mb-1">DOI</span>
                   <span className="text-sm font-headline text-white/60">10.1109/BLOCK.2024.0042</span>
                 </div>

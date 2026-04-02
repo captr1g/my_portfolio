@@ -39,7 +39,7 @@ export default function Experience() {
 
       {/* Stats Grid */}
       <motion.section
-        className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-32"
+        className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-32"
         initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }}
         variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
       >
@@ -47,7 +47,6 @@ export default function Experience() {
           { label: 'Code Integrity',   value: '100%',  accent: 'border-primary',           textCol: 'text-primary',             desc: 'Critical Path Coverage achieved across all audited mainnet protocols.' },
           { label: 'Security Ledger',  value: 'ZERO',  accent: 'border-secondary-container',textCol: 'text-secondary-container', desc: 'Post-deployment critical vulnerabilities or audit findings since inception.' },
           { label: 'Networks',         value: '08+',   accent: 'border-white/10',           textCol: 'text-white/90',            desc: 'Production-grade deployments on Solana, Ethereum, and Polygon.' },
-          { label: 'Execution',        value: '$250M+',accent: 'border-white/10',           textCol: 'text-white/90',            desc: 'Cumulative Total Value Locked (TVL) handled by custom smart contracts.' },
         ].map((stat, i) => (
           <motion.div
             key={stat.label} variants={fadeUp} custom={i}
