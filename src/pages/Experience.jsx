@@ -63,7 +63,7 @@ export default function Experience() {
       <section className="space-y-12">
         {[
           {
-            years: '2023 - Present', company: 'Staker.fun', role: 'Lead Protocol Architect',
+            years: 'May 2025 - Present', company: 'Staker.fun', role: 'Blockchain Engineer',
             accentYear: 'text-primary', projectAccent: 'group-hover:border-primary/30',
             title: 'Liquid Staking Optimization',
             badge: <span className="bg-primary/10 text-primary text-[10px] px-2 py-1 uppercase tracking-tighter border border-primary/20">Active Node</span>,
@@ -75,7 +75,7 @@ export default function Experience() {
             icon: 'token',
           },
           {
-            years: '2022 - 2023', company: 'Maxtron', role: 'Senior EVM Engineer',
+            years: 'Apr 2025 - Present', company: 'Maxtron Innovations', role: 'Blockchain Developer',
             accentYear: 'text-white/40', projectAccent: 'group-hover:border-secondary-container/30',
             title: 'Cross-Chain Liquidity Bridges',
             bullets: [
@@ -86,14 +86,14 @@ export default function Experience() {
             icon: 'security',
           },
           {
-            years: '2021 - 2022', company: 'Freelance', role: 'Independent Auditor',
+            years: 'Jan 2025 - Apr 2025', company: 'Freelance', role: 'Blockchain Developer',
             accentYear: 'text-white/40', projectAccent: '',
             title: 'Security & Systems Consulting',
             body: 'Provided specialized security audits for 12+ DeFi projects, identifying 4 high-severity vulnerabilities before mainnet launch. Focused on formal verification and symbolic execution of contract logic.',
             tags: ['AUDITING', 'FORMAL METHODS', 'SLITHER'],
           },
           {
-            years: '2020 - 2021', company: 'Neemo', role: 'Founding Engineer',
+            years: 'Jul 2024 - Dec 2024', company: 'Neemo Finance', role: 'Smart Contract developer',
             accentYear: 'text-white/40', projectAccent: '',
             title: 'Decentralized ID Protocol',
             body: 'Pioneered zero-knowledge proof integrations for sovereign identity management. Built the initial MVP using Substrate and Polkadot.js.',
